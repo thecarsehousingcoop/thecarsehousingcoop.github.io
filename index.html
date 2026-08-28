@@ -17,12 +17,12 @@
 </head>
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
+<!-- Navbar -->
+<div class="w3-top w3-hide-small">
     <div class="w3-bar w3-2024-watercress w3-wide w3-padding w3-card">
-        <a href="#home" class="w3-bar-item w3-button">The Carse Housing Co-op</a>
+        <a href="#home" class="w3-bar-item w3-button w3-hide-small">The Carse Housing Co-op</a>
         <!-- Float links to the right. Hide them on small screens -->
-        <div class="w3-right w3-mobile">
+        <div class="w3-right">
             <div class="w3-dropdown-hover">
                 <button class="w3-button w3-2024-watercress w3-wide">About us</button>
                 <div class="w3-dropdown-content w3-bar-block w3-card-4">
@@ -45,6 +45,31 @@
             </div>
             <a href="#support" class="w3-bar-item w3-button">Support Us</a>
         </div>
+    </div>
+</div>
+
+<!-- Small Screen Navbar -->
+<div class="w3-top w3-hide-medium w3-hide-big">
+    <div class="w3-bar-block w3-2024-watercress w3-wide w3-padding w3-card">
+            <button onclick="myFunction('us')" class="w3-button w3-2024-watercress w3-wide">About us</button>
+            <div id="us" class="w3-container w3-bar-block w3-card-4 w3-hide">
+                <a onclick="myFunction('us')" href="#about" class="w3-bar-item w3-button">Who We Are</a>
+                <a onclick="myFunction('us')" href="#funding" class="w3-bar-item w3-button">Our Funding Model</a>
+                <a onclick="myFunction('us')" href="#housing" class="w3-bar-item w3-button">Housing and Co-ops</a>
+                <a onclick="myFunction('us')" href="#members" class="w3-bar-item w3-button">Founding Members</a>
+                <a onclick="myFunction('us')" href="#values" class="w3-bar-item w3-button">Values and Objectives</a>
+            </div>
+
+            <button onclick="myFunction('info')" class="w3-button w3-2024-watercress w3-wide">Info</button>
+            <div id="info" class="w3-container w3-bar-block w3-card-4 w3-hide">
+                <a onclick="myFunction('info')" href="#faqs" class="w3-bar-item w3-button">FAQs</a>
+                <!--                    <a onclick="myFunction('info')" href="insert business plan here"class="w3-bar-item w3-button">Business Plan</a>-->
+                <!--                    <a onclick="myFunction('info')" href="#insert financial forecasting here" class="w3-bar-item w3-button">Financial Forecasting</a>-->
+                <a onclick="myFunction('info')" href="Seal_564502_5_1201676.pdf" class="w3-bar-item w3-button">Primary Rules</a>
+                <!--                    <a onclick="myFunction('info')" href="#secondary-rules" class="w3-bar-item w3-button">Secondary Rules</a>-->
+
+        </div>
+        <a href="#support" class="w3-bar-item w3-button">Support Us</a>
     </div>
 </div>
 <div class="w3-container w3-padding-32" id="home"></div>
@@ -208,6 +233,17 @@
     <!--<p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p> -->
     <p>Website made by <a href="https://github.com/TheTominator63/" title="Tom Chapman" target="_blank" class="w3-hover-text-khaki">Tom Chapman</a></p>
 </footer>
+
+<script>
+    function myFunction(id) {
+      var x = document.getElementById(id);
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+</script>
 
 </body>
 </html>
